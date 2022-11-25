@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Space Defenders</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <meta charset="UTF-8" />
+
+    <link rel="icon" href="./assets/images/logo.png" type="image/x-icon">
+
+    <link href="./styles/main.css" rel="stylesheet" type="text/css">
+    <link href="./styles/loading.css" rel="stylesheet" type="text/css">
+    <link href="./styles/menu.css" rel="stylesheet" type="text/css">
+    <link href="./styles/ui.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="./assets/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <script type="module" src="./src/main.js"></script>
+</head>
+
+<body>
+    <audio id='music'><source src="./assets/audio/music.wav"></audio>
+    <audio id='shooting-sfx'><source src="./assets/audio/shooting.wav"></audio>
+    <audio id='explosion-sfx'><source src="./assets/audio/explosion.wav"></audio>
+
+    <div id="scene-container">
+
+        <span id="fps-counter"> FPS: 00  </span>
+
+        <div class="outer" id="loading-screen">
+            <div class="middle">
+                <div class="inner">
+                    <div class="ring"> Loading </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="outer" id="menu-screen">
+            <div class="middle">
+                <div class="inner">
+                    <div class='title'> 
+                        SPACE DEFENDERS 
+                    </div>
+                    <div class='options'>
+                        <div class='option' id='play-btn'>
+                            PLAY
+                        </div>
+                        <div class='commands' id='com-pc'>
+                            <span class='command'>A</span>=LEFT&nbsp;
+                            <span class='command'>D</span>=RIGHT&nbsp;
+                            <span class='command'><i class="fa fa-arrow-up" aria-hidden="true"></i></span>=SHOOT
+                            <!-- <img src="./assets/images/left-mouse.png" id='mouse'> --> 
+                        </div>
+
+                        <div class='commands' id='com-mobile'>
+                            <span class='command'><i class="fa fa-arrow-left" aria-hidden="true"></i></span>=LEFT&nbsp;
+                            <span class='command'><i class="fa fa-arrow-right" aria-hidden="true"></i></span>=RIGHT&nbsp;
+                            <span class='command'><i class="fa fa-hand-o-up" aria-hidden="true"></i></span>=SHOOT
+                            <!-- <img src="./assets/images/left-mouse.png" id='mouse'> --> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="outer" id="pause-menu-screen">
+            <div class="middle">
+                <div class="inner">
+                    <div class='options'>
+                        <div class='option' id='continue-btn'>
+                            CONTINUE
+                        </div>
+                        <div class='option' id='menu-btn'>
+                            MENU
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="outer" id="game-over-screen">
+            <div class="middle">
+                <div class="inner">
+                    <div class='title'> 
+                        GAME OVER
+                    </div>
+                    <div class='options'>
+                        <div class='score'> 
+                            SCORE:<span id='final-score'></span>
+                        </div>
+                        <div class='option' id='menu-btn-2'>
+                            MENU
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <i class="fa fa-pause" id='pause-btn' aria-hidden="true"></i>
+
+        <div id="ui-screen">
+            <div class='ui'>HEALTH:<span id="health">100</span></div>
+            <div class='ui' id='score-panel'>
+                <div id='score-plus'></div>
+                <div>SCORE:<span id="score"></span></div>    
+            </div> 
+        </div>
+
+        <div class="outer" id="level-up-screen">
+            <div class="middle">
+                <div class="inner">
+                    <div>
+                        LEVEL <span id='level'>1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id='audio-icon'> 
+            <i id='volume-off' class="fa fa-volume-off" aria-hidden="true"></i>
+            <i id='volume-up' class="fa fa-volume-up" aria-hidden="true"></i>
+        </div>
+
+        <!-- Here we will add the canvas -->
+    </div>
+</body>
+
+
+
+</html>
